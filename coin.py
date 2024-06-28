@@ -4,6 +4,9 @@ def coin_toss():
     return random.choice(["Heads", "Tails"])
 
 def main():
+    user_name = input("Who are you? ")
+    print(f"Hello, {user_name}!")
+    
     print("Tossing a coin...")
     results = [coin_toss() for _ in range(3)]
     
@@ -14,6 +17,10 @@ def main():
     tails_count = results.count("Tails")
     
     print(f"Heads: {heads_count}, Tails: {tails_count}")
+    if heads_count > tails_count:
+        print("You won!")
+    else:
+        print("You lost!")
 
 if __name__ == "__main__":
     main()
