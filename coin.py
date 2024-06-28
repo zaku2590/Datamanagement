@@ -4,6 +4,9 @@ def coin_toss():
     return random.choice(["Heads", "Tails"])
 
 def main():
+    user_name = input("Who are you? ")
+    print(f"Hello, {user_name}!")
+    
     print("Tossing a coin...")
     results = [coin_toss() for _ in range(3)]
     
